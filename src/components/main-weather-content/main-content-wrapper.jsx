@@ -1,0 +1,18 @@
+import MainContentContainer from './main-content-container';
+import './main-content-wrapper.css';
+
+const MainContentWrapper = () => {
+    return (
+        <div className='body'>
+            <div className="weather-wrapper">
+                <div className='weather-body'>
+                    <div className='weather-content'>
+                        <MainContentContainer />
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default MainContentWrapper;
