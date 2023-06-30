@@ -1,6 +1,13 @@
 .weather-content-flex{
     display: flex;
+    gap: 30px;
+}
+.detail-info-container{
+    width: 414px;
+
 }
 .accordion-items-container{
-    
+    width: 350px;
+    height: 540px;
+    overflow-y: scroll;
 }

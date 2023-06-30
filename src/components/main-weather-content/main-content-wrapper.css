@@ -1,11 +1,11 @@
 .weather-wrapper {
     padding: 100px 0;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .weather-body {
     max-width: 1024px;
-    /* min-height: 770px; */
+    height: 770px;
     margin: 0 auto;
     background-color: #101014;
     vertical-align: middle;
@@ -13,5 +13,6 @@
     border-radius: 35px;
 }
 .weather-content {
-    padding: 50px;
+    padding: 115px;
+    height: 100%;
 }

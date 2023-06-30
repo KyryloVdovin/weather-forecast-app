@@ -1,0 +1,33 @@
+.accordionItem {
+    background-color: #bbd8ec;
+    border-radius: 15px;
+    padding: 18px;
+    min-height: 72px;
+    margin: 20px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.accordionHeader {
+    margin-bottom: 20px;
+}
+
+.accordionContent {
+    transition: margin-bottom 0.8s ease;
+}
+
+.dailyForecastItems {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.accordionItem .accordionExpanded {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.accordionItem .accordionCollapsed {
+    margin-bottom: -50%;
+    overflow: hidden;
+}

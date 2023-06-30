@@ -1,0 +1,60 @@
+.weatherAccordionHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weatherAccordionHeader p {
+    margin: 0;
+}
+
+.weatherAccordionHeader p:first-child {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.weatherAccordionHeader p:last-child {
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 500;
+    max-width: 140px;
+}
+
+.weatherCode {
+    display: flex;
+    gap: 10px;
+}
+
+.weatherIconContainer {
+    position: relative;
+    width: 36px;
+}
+
+.weatherIconContainer img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+}
+
+.weatherTemperature {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.weatherTemperature img {
+    width: 14px;
+}
+
+.weatherTemperature span{
+    margin-right: 6px;
+}
+.weatherTemperature span:last-child{
+    margin-right: 0;
+}
+.weatherTemperature img{
+    margin-right: 6px;
+    transform: translateY(50%);
+}

@@ -1,0 +1,18 @@
+.dailyForecast {
+    text-align: center;
+    font-size: 12px;
+}
+
+.dailyForecast img {
+    width: 20px;
+    margin: 0 auto 8px;
+    display: block;
+}
+.dailyForecast div {
+    margin-bottom: 8px;
+}
+.dailyForecast div:last-child {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
