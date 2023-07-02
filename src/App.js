@@ -7,7 +7,7 @@ import store from './components/redux/redux-store';
 function App() {
   return (
     <Provider store={store}>
-      <MainContentWrapper store={store}/>
+      <MainContentWrapper store={store} />
     </Provider>
   );
 }
