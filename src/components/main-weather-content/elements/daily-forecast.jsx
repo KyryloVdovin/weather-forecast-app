@@ -1,12 +1,13 @@
 import s from './daily-forecast.module.css';
 import icon from '../../../images/icons/umbrella.png';
 
-const DailyForecast = ({ title, content }) => {
+const DailyForecast = ({ title, value, units }) => {
     return (
         <div className={s.dailyForecast}>
             <img src={icon} />
             <div>{title}</div>
-            <div>68%</div>
+            <div className={s.units}>{units}</div>
+            <div>{value}</div>
         </div>
     )
 }

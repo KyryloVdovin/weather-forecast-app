@@ -5,7 +5,7 @@ import { getWeather } from '../redux/main-content-reducer';
 const mapDispatchToProps = (state) => {
     return {
         weatherData: state.mainContentPage.weatherData,
-        isFetching: state.mainContentPage.isFetching,
+        isFetchingSuccess: state.mainContentPage.isFetchingSuccess,
     }
 }
 

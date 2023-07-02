@@ -8,11 +8,19 @@
     margin: 0 auto 8px;
     display: block;
 }
+
 .dailyForecast div {
     margin-bottom: 8px;
 }
+
+.units {
+    font-size: 14px;
+}
+
 .dailyForecast div:last-child {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 0;
+    max-width: 45px;
+    margin: 0 auto;
 }

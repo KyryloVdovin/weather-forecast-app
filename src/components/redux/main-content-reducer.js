@@ -1,11 +1,11 @@
 import { weatherAPI } from '../../api/api';
 
 const GET_WEATHER = 'GET_WEATHER';
-const IS_FETCHING = 'IS_FETCHING';
+const IS_FETCHING_SUCCESS = 'IS_FETCHING_SUCCESS';
 
 const initialState = {
     weatherData: null,
-    isFetching: true
+    isFetchingSuccess: false
 };
 
 const mainContentReducer = (state = initialState, action) => {
@@ -15,10 +15,10 @@ const mainContentReducer = (state = initialState, action) => {
                 ...state,
                 weatherData: action.weatherData
             }
-        case IS_FETCHING:
+        case IS_FETCHING_SUCCESS:
             return {
                 ...state,
-                isFetching: action.isFetching
+                isFetchingSuccess: action.isFetchingSuccess
             }
         default:
             return state;
@@ -31,19 +31,19 @@ export const getWeatherData = (weatherData) => {
         weatherData
     }
 };
-const setIsFetching = (isFetching) => {
+const setIsFetching = (isFetchingSuccess) => {
     return {
-        type: IS_FETCHING,
-        isFetching
+        type: IS_FETCHING_SUCCESS,
+        isFetchingSuccess
     }
 };
 
 export const getWeather = () => async (dispatch) => {
-    dispatch(setIsFetching(true));
+    dispatch(setIsFetching(false));
     let response = await weatherAPI.getWeatherData();
 
     if (response.status === 200) {
-        dispatch(setIsFetching(false));
+        dispatch(setIsFetching(true));
         dispatch(getWeatherData(response.data));
     }
 }

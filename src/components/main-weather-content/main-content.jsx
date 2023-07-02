@@ -1,4 +1,4 @@
-import Accordion from './weather-accordion-item';
+import WeatherAccordionItem from './weather-accordion-item';
 import './main-content.css';
 import { useEffect } from 'react';
 
@@ -10,10 +10,9 @@ const MainContent = (props) => {
     let weatherItem = [];
     let forecasItems;
 
-    if (!props.isFetching) {
-        console.log(props.isFetching);
+    if (props.isFetchingSuccess) {
         const { time, weathercode, temperature_2m_max, temperature_2m_min,
-            precipitation_sum, rain_sum, windspeed_10m_max, winddirection_10m_dominant } = props.weatherData?.daily;
+            precipitation_sum, rain_sum, windspeed_10m_max, winddirection_10m_dominant } = props.weatherData.daily;
 
         const onGeneratedRow = (data, index) => {
 
@@ -28,22 +27,23 @@ const MainContent = (props) => {
             jsonData["rainSum"] = rain_sum[index];
             jsonData["windspeedMax"] = windspeed_10m_max[index];
             jsonData["windDirection"] = winddirection_10m_dominant[index];
+            jsonData["dailyUnits"] = props.weatherData.daily_units;
 
             weatherItem.push(jsonData);
         }
 
         time.map((i, index) => onGeneratedRow(i, index));
         forecasItems = weatherItem.map(item => {
-            return <Accordion key={item.id} time={item.time} weatherCode={item.weatherCode} temperatureMax={item.temperatureMax} temperatureMin={item.temperatureMin}
-                precipitationSum={item.precipitationSum} rainSum={item.rainSum} windspeedMax={item.windspeedMax} windDirection={item.windDirection} />;
+            return <WeatherAccordionItem key={item.id} time={item.time} weatherCode={item.weatherCode}
+                temperatureMax={item.temperatureMax} temperatureMin={item.temperatureMin}
+                precipitationSum={item.precipitationSum} rainSum={item.rainSum} windspeedMax={item.windspeedMax}
+                windDirection={item.windDirection} dailyUnits={item.dailyUnits}/>;
         });
     }
 
     return (
         <div className="weather-content-flex">
-
-            {console.log("weatherItem")}
-            {console.log(props.weatherData)}
+            {console.log(weatherItem)}
             <div className="detail-info-container">
             </div>
             <div className="accordion-items-container">
