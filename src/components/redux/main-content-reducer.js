@@ -1,11 +1,12 @@
 import { weatherAPI } from '../../api/api';
+import { change } from 'redux-form';
 
 const GET_WEATHER = 'GET_WEATHER';
 const IS_FETCHING_SUCCESS = 'IS_FETCHING_SUCCESS';
 
 const initialState = {
     weatherData: null,
-    isFetchingSuccess: false
+    isFetchingSuccess: false,
 };
 
 const mainContentReducer = (state = initialState, action) => {
@@ -38,9 +39,9 @@ const setIsFetching = (isFetchingSuccess) => {
     }
 };
 
-export const getWeather = () => async (dispatch) => {
+export const getWeather = (latitude, longitude) => async (dispatch) => {
     dispatch(setIsFetching(false));
-    let response = await weatherAPI.getWeatherData();
+    let response = await weatherAPI.getWeatherData(latitude, longitude);
 
     if (response.status === 200) {
         dispatch(setIsFetching(true));

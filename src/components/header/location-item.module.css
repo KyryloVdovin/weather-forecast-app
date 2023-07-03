@@ -1,0 +1,16 @@
+.locationItem {
+    /* background-color: #c7c7c9; */
+    margin-bottom: 10px;
+    color: #8e8e8e;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.locationItem:hover {
+    background-color: #bbd8ec;
+    color: black;
+}
+
+.locationItem img {
+    margin-right: 10px;
+}

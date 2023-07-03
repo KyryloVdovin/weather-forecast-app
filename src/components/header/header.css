@@ -1,0 +1,40 @@
+.header-container {
+    position: relative;
+}
+
+.header-container div:first-child {
+    display: flex;
+    gap: 90px;
+    color: #8e8e8e;
+}
+
+.found-locations {
+    position: absolute;
+    top: 24px;
+    background-color: #1e1e1e;
+    width: 350px;
+    padding-top: 40px;
+}
+
+.input-container input {
+    width: 350px;
+    background-color: #1e1e1e;
+    border-radius: 22px;
+    padding: 10px 20px 10px 55px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #8e8e8e;
+}
+
+.input-container {
+    position: relative;
+    z-index: 2;
+}
+
+.input-container svg {
+    position: absolute;
+    left: 20px;
+    width: 28px;
+    height: 44px;
+    fill: #8e8e8e;
+}

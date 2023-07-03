@@ -3,10 +3,14 @@ import s from './weather-accordion-item.module.css';
 import WeatherAccordionHeader from './elements/weather-accordion-header';
 import DailyForecast from './elements/daily-forecast';
 import { weatherCodeSelector, getDay, getDayNumber, getWeatherIcon } from './weather-code-selector';
+import precipitation from '../../images/icons/precipitation.png';
+import rain from '../../images/icons/rain.png';
+import wind from '../../images/icons/wind.png';
+import snow from '../../images/icons/snow.png';
 
 const WeatherAccordionItem = (props) => {
     const { time, weatherCode, temperatureMax, temperatureMin, precipitationSum, rainSum,
-        windspeedMax, windDirection, dailyUnits } = props;
+        snowfallSum, windspeedMax, windDirection, dailyUnits } = props;
     const [isActive, setIsActive] = useState(false);
 
     let weatherCodeDesc = weatherCodeSelector(weatherCode);
@@ -23,9 +27,10 @@ const WeatherAccordionItem = (props) => {
             </div>
             <div className={`${s.accordionContent} ${isActive ? s.accordionExpanded : s.accordionCollapsed}`}>
                 <div className={s.dailyForecastItems}>
-                    <DailyForecast title="Precipitation" value={precipitationSum} units={dailyUnits.precipitation_sum}/>
-                    <DailyForecast title="Wind" values={windDirection} value={windspeedMax} units={dailyUnits.windspeed_10m_max}/>
-                    <DailyForecast title="Rain" value={rainSum} units={dailyUnits.rain_sum}/>
+                    <DailyForecast title="Precipitation" icon={precipitation} value={precipitationSum} units={dailyUnits.precipitation_sum} />
+                    <DailyForecast title="Rain" icon={rain} value={rainSum} units={dailyUnits.rain_sum} />
+                    <DailyForecast title="Wind" icon={wind} values={windDirection} value={windspeedMax} units={dailyUnits.windspeed_10m_max} />
+                    <DailyForecast title="Snow" icon={snow} value={snowfallSum} units={dailyUnits.snowfall_sum} />
                 </div>
             </div>
         </div>

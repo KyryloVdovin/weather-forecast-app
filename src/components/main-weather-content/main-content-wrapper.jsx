@@ -1,4 +1,5 @@
 import MainContentContainer from './main-content-container';
+import HeaderContainer from '../header/header-container';
 import './main-content-wrapper.css';
 
 const MainContentWrapper = () => {
@@ -7,6 +8,7 @@ const MainContentWrapper = () => {
             <div className="weather-wrapper">
                 <div className='weather-body'>
                     <div className='weather-content'>
+                        <HeaderContainer />
                         <MainContentContainer />
                     </div>
                 </div>

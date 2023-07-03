@@ -14,5 +14,6 @@
 }
 .weather-content {
     padding: 115px;
+    padding-top: 50px;
     height: 100%;
 }
