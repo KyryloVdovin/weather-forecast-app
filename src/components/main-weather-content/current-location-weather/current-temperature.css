@@ -1,0 +1,28 @@
+.current-temperature p {
+    margin-top: 20px;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+}
+
+.current-temperature span {
+    text-align: center;
+    display: block;
+}
+
+.current-temperature img {
+    width: 30px;
+    display: block;
+}
+.weather-code{
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    column-gap: 10px;
+}
+.weather-code span{
+    line-height: 50px;
+    color: white;
+    font-size: 18px;
+}

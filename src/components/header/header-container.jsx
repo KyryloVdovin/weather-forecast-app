@@ -7,8 +7,6 @@ import { reset } from 'redux-form';
 const mapDispatchToProps = (state) => {
     return {
         foundLocations: state.header.foundLocations,
-        currerntCountry: state.header.country,
-        currentCity: state.header.city,
         findCityForm: state.form.findCity
     }
 }

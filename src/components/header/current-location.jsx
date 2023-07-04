@@ -1,9 +1,9 @@
-
+import './current-location.css';
 
 const CurrentLocation = ({ currentCity, currerntCountry }) => {
     return (
-        <div>
-            <span>{currentCity},{currerntCountry}</span>
+        <div className="current-location">
+            <span>{currentCity}, {currerntCountry}</span>
         </div>
     )
 }

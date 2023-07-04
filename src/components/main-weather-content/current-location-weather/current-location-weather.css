@@ -1,0 +1,26 @@
+.current-location-weather-detail {
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    margin-top: 20px;
+
+    color: #575757;
+}
+
+.current-weather-right img {
+    width: 32px;
+    margin-right: 10px;
+}
+.current-weather-right span {
+    line-height: 32px;
+}
+.current-weather-right img:first-child {
+    margin-bottom: 10px;
+}
+.current-weather-left span {
+    line-height: 32px;
+    font-size: 18px;
+}
+.current-weather-left div:first-child {
+    margin-bottom: 10px;
+}

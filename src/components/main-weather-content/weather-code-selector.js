@@ -145,6 +145,17 @@ export const getDayNumber = (dataTime) => {
 
     return forecastData.getDate();
 }
+export const getTime = (dataTime) => {
+    const forecastData = formatDataTime(dataTime);
+    const hours = forecastData.getHours() < 10 ? `0${forecastData.getHours()}` : forecastData.getHours();
+    const minutes = forecastData.getMinutes() < 10 ? `0${forecastData.getMinutes()}` : forecastData.getMinutes();
+
+    return `${hours}:${minutes}`;
+}
+
+export const getIsDataSame = (data1, data2) => {
+    return getDayNumber(data1) === getDayNumber(data2);
+}
 
 export const getWeatherIcon = (weatherCode) => {
     let weatherIcon;

@@ -32,7 +32,20 @@ const WeatherAccordionItem = (props) => {
                     <DailyForecast title="Wind" icon={wind} values={windDirection} value={windspeedMax} units={dailyUnits.windspeed_10m_max} />
                     <DailyForecast title="Snow" icon={snow} value={snowfallSum} units={dailyUnits.snowfall_sum} />
                 </div>
+                <div className={s.hourlyForecast}>
+
+                </div>
             </div>
+        </div>
+    )
+}
+
+const HourlyForecastItem = (props) => {
+    return (
+        <div>
+            <span>13:00</span>
+            <img />
+            
         </div>
     )
 }

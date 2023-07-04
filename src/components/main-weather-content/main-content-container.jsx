@@ -6,6 +6,14 @@ const mapDispatchToProps = (state) => {
     return {
         weatherData: state.mainContentPage.weatherData,
         isFetchingSuccess: state.mainContentPage.isFetchingSuccess,
+        currerntCountry: state.header.country,
+        currentCity: state.header.city,
+        currentWeather: state.mainContentPage.weatherData?.current_weather,
+        currentWeatherCode: state.mainContentPage.weatherData?.current_weather.weathercode,
+        currentTemperature: Math.round(state.mainContentPage.weatherData?.current_weather.temperature),
+        hourly: state.mainContentPage.weatherData?.hourly,
+        hourlyUnits: state.mainContentPage.weatherData?.hourly_units,
+        currentWeatherTime: state.mainContentPage.weatherData?.current_weather.time,
     }
 }
 

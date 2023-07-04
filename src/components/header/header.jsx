@@ -48,7 +48,7 @@ const Header = (props) => {
         <div className="header-container">
             <div>
                 <HeaderFindCityReduxForm onSubmit={getLocations} foundLocationsItems={foundLocations} />
-                <CurrentLocation currentCity={props.currentCity} currerntCountry={props.currerntCountry} />
+                {/* <CurrentLocation currentCity={props.currentCity} currerntCountry={props.currerntCountry} /> */}
             </div>
             {props.foundLocations && <div className='found-locations'>{foundLocations}</div>}
         </div>
