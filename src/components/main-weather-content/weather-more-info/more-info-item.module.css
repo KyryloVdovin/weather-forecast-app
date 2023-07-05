@@ -25,7 +25,7 @@
 .moreInfoItem {
 
 }
-.moreInfoItem div:nth-child(2) {
+.value {
     font-size: 24px;
     font-weight: 500;
     text-align: center;
@@ -44,4 +44,12 @@
     height: 10px;
     border-radius: 5px;
     background-color: #5c9ce5;
+}
+
+.scale{
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 10px;
+    margin-bottom: 5px;
 }

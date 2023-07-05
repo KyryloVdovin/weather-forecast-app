@@ -1,8 +1,11 @@
-.current-weather-more-info{
+.currentWeatherMoreInfo{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 14px;
     margin-top: 20px;
     /* justify-content: center; */
+}
+.title{
+    color: white;
 }

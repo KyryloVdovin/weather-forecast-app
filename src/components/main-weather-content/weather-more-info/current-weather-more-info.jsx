@@ -1,4 +1,4 @@
-import './current-weather-more-info.css';
+import s from './current-weather-more-info.module.css';
 import MoreInfoItem from './info-item';
 import {getItemData} from './current-weather-info-item-data';
 
@@ -33,11 +33,11 @@ const CurrentWeatherMoreInfo = ({ currentWeatherTime, hourly, hourlyUnits }) => 
         const newItem = getItemData(item);
 
         return <MoreInfoItem key={item.id} value={item.value} title={newItem.value}
-            hourlyUnits={item.hourlyUnits} icon={newItem.icon} maxValue={newItem.maxValue}/>;
+            hourlyUnits={item.hourlyUnits} icon={newItem.icon} maxValue={newItem.maxValue} scale={newItem.scale}/>;
     });
     return (
-        <div className='current-weather-more-info'>
-            <p>More details of todays weather</p>
+        <div className={s.currentWeatherMoreInfo}>
+            <p className={s.title}>More details of todays weather</p>
             {initedInfoItems}
 
         </div>
