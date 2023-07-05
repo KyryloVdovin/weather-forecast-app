@@ -9,7 +9,7 @@ function App() {
   return (
     <Provider store={store}>
       <Routes>
-        <Route path="/weather-forecast" element={<MainContentWrapper store={store} />} />
+        <Route path="/weather-forecast-app" element={<MainContentWrapper store={store} />} />
       </Routes>
     </Provider>
   );
