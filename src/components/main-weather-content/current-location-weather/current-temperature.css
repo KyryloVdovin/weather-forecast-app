@@ -14,14 +14,16 @@
     width: 30px;
     display: block;
 }
-.weather-code{
+
+.weather-code {
     max-width: 200px;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     column-gap: 10px;
 }
-.weather-code span{
+
+.weather-code span {
     line-height: 50px;
     color: white;
     font-size: 18px;

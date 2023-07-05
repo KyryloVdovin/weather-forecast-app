@@ -34,3 +34,19 @@
     margin-bottom: -50%;
     overflow: hidden;
 }
+
+@media screen and (max-width: 440px) {
+    .accordionItem {
+        padding: 5px;
+        min-height: 54px;
+    }
+
+    .accordionHeader {
+        margin-bottom: 8px;
+    }
+
+    .accordionItem .accordionCollapsed {
+        margin-bottom: -70%;
+        overflow: hidden;
+    }
+}

@@ -2,7 +2,7 @@
     background-color: white;
     padding: 20px;
     border-radius: 30px;
-    width: 200px;
+    min-width: 180px;
 }
 
 .itemHeader {
@@ -22,9 +22,8 @@
     font-weight: 500;
 }
 
-.moreInfoItem {
+.moreInfoItem {}
 
-}
 .value {
     font-size: 24px;
     font-weight: 500;
@@ -46,7 +45,7 @@
     background-color: #5c9ce5;
 }
 
-.scale{
+.scale {
     display: flex;
     justify-content: space-between;
 

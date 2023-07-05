@@ -37,7 +37,7 @@ const CurrentWeatherMoreInfo = ({ currentWeatherTime, hourly, hourlyUnits }) => 
     });
     return (
         <div className={s.currentWeatherMoreInfo}>
-            <p className={s.title}>More details of todays weather</p>
+            {/* <p className={s.title}>More details of todays weather</p> */}
             {initedInfoItems}
 
         </div>

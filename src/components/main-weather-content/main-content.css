@@ -1,10 +1,11 @@
 .weather-content-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    column-gap: 30px;
 }
 
 .detail-info-container {
-    width: 414px;
+    /* width: 414px; */
 }
 
 .accordion-items-container {
@@ -15,4 +16,35 @@
 
 .accordion-items-container::-webkit-scrollbar {
     display: none;
+}
+
+@media screen and (max-width: 830px) {
+    .weather-content-flex {
+        display: block;
+    }
+
+    .detail-info-container {
+        margin: 0 auto;
+    }
+
+    .accordion-items-container {
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        justify-content: center;
+
+        column-gap: 30px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .accordion-items-container {
+        min-width: 0;
+    }
+
+    .accordion-items-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        column-gap: 30px;
+    }
 }

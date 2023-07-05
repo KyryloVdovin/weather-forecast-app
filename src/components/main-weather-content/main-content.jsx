@@ -60,7 +60,7 @@ const MainContent = (props) => {
                 <CurrentLocationWeather currerntCountry={props.currerntCountry} currentCity={props.currentCity}
                     sunriseTime={sunriseTime} sunsetTime={sunsetTime} />
                 <CurrentTemperature weatherIcon={weatherIcon} temperature={props.currentTemperature} weatherDesc={weatherDesc} />
-                <CurrentWeatherMoreInfo currentWeatherTime={props.currentWeatherTime} hourly={props.hourly} 
+                <CurrentWeatherMoreInfo currentWeatherTime={props.currentWeatherTime} hourly={props.hourly}
                     hourlyUnits={props.hourlyUnits} />
             </div>
             <div className="accordion-items-container">

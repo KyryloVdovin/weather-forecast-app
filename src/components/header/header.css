@@ -3,8 +3,6 @@
 }
 
 .header-container div:first-child {
-    /* display: flex; */
-    /* gap: 90px; */
     color: #8e8e8e;
 }
 
@@ -12,12 +10,12 @@
     position: absolute;
     top: 24px;
     background-color: #1e1e1e;
-    width: 350px;
+    width: 414px;
     padding-top: 40px;
 }
 
 .input-container input {
-    width: 350px;
+    width: 414px;
     background-color: #1e1e1e;
     border-radius: 22px;
     padding: 10px 20px 10px 55px;
@@ -37,4 +35,28 @@
     width: 28px;
     height: 44px;
     fill: #8e8e8e;
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 830px) {
+    .header-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .input-container input {
+        width: 100%;
+    }
+
+    .found-locations {
+        width: 100%;
+        padding-top: 25px;
+    }
+
+    .header-container {
+        display: block;
+    }
 }
