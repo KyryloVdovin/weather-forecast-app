@@ -1,11 +1,12 @@
 .accordionItem {
-    background-color: #bbd8ec;
+    background-color: white;
     border-radius: 15px;
     padding: 15px;
     min-height: 72px;
     margin: 20px 0;
     width: 100%;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .accordionHeader {
@@ -20,8 +21,8 @@
     display: flex;
     gap: 32px;
     justify-content: space-between;
-    border-top: 1px solid #b6b6b6;
-    border-bottom: 1px solid #b6b6b6;
+    border-top: 2px solid #f3f3f3;
+    border-bottom: 2px solid #f3f3f3;
     padding: 20px 0;
 }
 

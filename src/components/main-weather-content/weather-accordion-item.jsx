@@ -19,8 +19,8 @@ const WeatherAccordionItem = (props) => {
     let weatherImage = getWeatherIcon(weatherCode);
 
     return (
-        <div className={s.accordionItem}>
-            <div className={s.accordionHeader} onClick={() => setIsActive(!isActive)}>
+        <div className={s.accordionItem} onClick={() => setIsActive(!isActive)}>
+            <div className={s.accordionHeader} >
                 <WeatherAccordionHeader day={day} dayNumber={dayNumber} weatherImage={weatherImage} weatherCodeDesc={weatherCodeDesc}
                     temperatureMax={Math.round(temperatureMax)} temperatureMin={Math.round(temperatureMin)} />
                 {/* <div>{isActive ? '-' : '+'}</div> */}
@@ -45,7 +45,7 @@ const HourlyForecastItem = (props) => {
         <div>
             <span>13:00</span>
             <img />
-            
+
         </div>
     )
 }

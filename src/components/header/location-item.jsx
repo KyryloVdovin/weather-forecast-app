@@ -1,7 +1,7 @@
 import s from './location-item.module.css';
 
 const LocationItem = (props) => {
-    const { countryCode, name, country, latitude, longitude } = props;
+    const { countryCode, name, country, latitude, longitude, adminRegion } = props;
 
     const selectCity = () => {
         props.getWeather(latitude, longitude);
@@ -17,7 +17,7 @@ const LocationItem = (props) => {
     return (
         <div className={s.locationItem} onClick={e => {selectCity(); resetForm(e);}}>
             <img src={`https://flagcdn.com/24x18/${countryCode.toLowerCase()}.png`} />
-            <span>{name}, {country}</span>
+            <span>{name}, {adminRegion}, {country}</span>
         </div>
     )
 }

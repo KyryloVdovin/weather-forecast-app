@@ -27,11 +27,8 @@ const FindCityForm = (props) => {
         </form>
     )
 }
-const HeaderFindCityReduxForm = reduxForm({
-    form: 'findCity',
-    enableReinitialize: true,
-    keepDirtyOnReinitialize: true,
-})(FindCityForm);
+
+const HeaderFindCityReduxForm = reduxForm({ form: 'findCity' })(FindCityForm);
 
 const Header = (props) => {
     const getLocations = (value) => {
@@ -40,15 +37,15 @@ const Header = (props) => {
 
     const foundLocations = props.foundLocations?.map(item => {
         return <LocationItem countryCode={item.country_code} latitude={item.latitude} longitude={item.longitude}
-            name={item.name} country={item.country} getWeather={props.getWeather} input={props.findCityForm} reset={props.reset}
-            foundLocations={props.foundLocations} getLocations={getLocations} setCurrentLocationData={props.setCurrentLocationData} />
+            name={item.name} country={item.country} getWeather={props.getWeather} input={props.findCityForm}
+            reset={props.reset} foundLocations={props.foundLocations} getLocations={getLocations}
+            setCurrentLocationData={props.setCurrentLocationData} adminRegion={item.admin1} />
     });
 
     return (
         <div className="header-container">
             <div>
                 <HeaderFindCityReduxForm onSubmit={getLocations} foundLocationsItems={foundLocations} />
-                {/* <CurrentLocation currentCity={props.currentCity} currerntCountry={props.currerntCountry} /> */}
             </div>
             {props.foundLocations && <div className='found-locations'>{foundLocations}</div>}
         </div>

@@ -1,9 +1,9 @@
 
 
-const CurrentData = (props) => {
+const CurrentData = ({currentWeekDay, currentDayNumber, currentMonth}) => {
     return (
         <div>
-            <span>Today 28 sep</span>
+            <span>{currentWeekDay} {currentDayNumber} {currentMonth}</span>
         </div>
     )
 }

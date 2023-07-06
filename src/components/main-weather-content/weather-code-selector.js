@@ -31,6 +31,7 @@ import thunderstormWithHeavyHailD from '../../images/icons/weather-symbols/99d.s
 import thunderstormWithHeavyHailN from '../../images/icons/weather-symbols/99n.svg';
 
 const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const weatherCodeData = [
     {
@@ -139,6 +140,11 @@ export const getDay = (dataTime) => {
     const forecastData = formatDataTime(dataTime);
 
     return weekday[forecastData.getUTCDay()];
+}
+export const getMonth = (dataTime) => {
+    const forecastData = formatDataTime(dataTime);
+
+    return month[forecastData.getUTCMonth()];
 }
 export const getDayNumber = (dataTime) => {
     const forecastData = formatDataTime(dataTime);

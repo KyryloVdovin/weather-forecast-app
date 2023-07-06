@@ -2,7 +2,10 @@ import WeatherAccordionItem from './weather-accordion-item';
 import CurrentLocationWeather from './current-location-weather/current-location-weather';
 import './main-content.css';
 import { useEffect } from 'react';
-import { getTime, getIsDataSame, getWeatherIcon, weatherCodeSelector } from './weather-code-selector';
+import {
+    getTime, getIsDataSame, getWeatherIcon, weatherCodeSelector, getDay,
+    getDayNumber, getMonth
+} from './weather-code-selector';
 import CurrentTemperature from './current-location-weather/current-temperature';
 import CurrentWeatherMoreInfo from './weather-more-info/current-weather-more-info';
 
@@ -14,8 +17,11 @@ const MainContent = (props) => {
     let weatherItem = [];
     let forecasItems;
     let sunriseTime, sunsetTime;
-    let weatherIcon = getWeatherIcon(props.currentWeatherCode);
-    let weatherDesc = weatherCodeSelector(props.currentWeatherCode);
+    const weatherIcon = getWeatherIcon(props.currentWeatherCode);
+    const weatherDesc = weatherCodeSelector(props.currentWeatherCode);
+    const currentWeekDay = getDay(props.currentWeatherTime);
+    const currentDayNumber = getDayNumber(props.currentWeatherTime);
+    const currentMonth = getMonth(props.currentWeatherTime);
 
     if (props.isFetchingSuccess) {
         const { time, weathercode, temperature_2m_max, temperature_2m_min,
@@ -49,8 +55,8 @@ const MainContent = (props) => {
         forecasItems = weatherItem.map(item => {
             return <WeatherAccordionItem key={item.id} time={item.time} weatherCode={item.weatherCode}
                 temperatureMax={item.temperatureMax} temperatureMin={item.temperatureMin}
-                precipitationSum={item.precipitationSum} rainSum={item.rainSum} snowfallSum={item.snowfallSum} windspeedMax={item.windspeedMax}
-                windDirection={item.windDirection} dailyUnits={item.dailyUnits} />;
+                precipitationSum={item.precipitationSum} rainSum={item.rainSum} snowfallSum={item.snowfallSum}
+                windspeedMax={item.windspeedMax} windDirection={item.windDirection} dailyUnits={item.dailyUnits} />;
         });
     }
 
@@ -58,7 +64,8 @@ const MainContent = (props) => {
         <div className="weather-content-flex">
             <div className="detail-info-container">
                 <CurrentLocationWeather currerntCountry={props.currerntCountry} currentCity={props.currentCity}
-                    sunriseTime={sunriseTime} sunsetTime={sunsetTime} />
+                    sunriseTime={sunriseTime} sunsetTime={sunsetTime} currentWeekDay={currentWeekDay}
+                    currentDayNumber={currentDayNumber} currentMonth={currentMonth}/>
                 <CurrentTemperature weatherIcon={weatherIcon} temperature={props.currentTemperature} weatherDesc={weatherDesc} />
                 <CurrentWeatherMoreInfo currentWeatherTime={props.currentWeatherTime} hourly={props.hourly}
                     hourlyUnits={props.hourlyUnits} />

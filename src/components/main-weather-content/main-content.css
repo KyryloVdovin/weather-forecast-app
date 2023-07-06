@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     column-gap: 30px;
+    min-width: 800px;
 }
 
 .detail-info-container {
@@ -10,8 +11,9 @@
 
 .accordion-items-container {
     min-width: 350px;
-    /* height: 540px; */
-    /* overflow-y: scroll; */
+    max-height: 756px;
+    overflow-y: scroll;
+    border-radius: 15px;
 }
 
 .accordion-items-container::-webkit-scrollbar {
@@ -21,6 +23,7 @@
 @media screen and (max-width: 830px) {
     .weather-content-flex {
         display: block;
+        min-width: 0;
     }
 
     .detail-info-container {
