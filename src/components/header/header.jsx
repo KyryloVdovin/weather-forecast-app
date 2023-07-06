@@ -18,12 +18,6 @@ const FindCityForm = (props) => {
                     33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z" />
                 </svg>
             </div>
-            <div >
-                <div>
-                </div>
-                <div>
-                </div>
-            </div>
         </form>
     )
 }

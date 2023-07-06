@@ -8,13 +8,16 @@
     overflow: hidden;
     cursor: pointer;
 }
+.accordionItem:first-child {
+    margin-top: 0;
+}
 
 .accordionHeader {
     margin-bottom: 20px;
 }
 
 .accordionContent {
-    transition: margin-bottom 0.8s ease;
+    transition: margin-bottom 1s ease;
 }
 
 .dailyForecastItems {
@@ -32,7 +35,7 @@
 }
 
 .accordionItem .accordionCollapsed {
-    margin-bottom: -50%;
+    margin-bottom: -120%;
     overflow: hidden;
 }
 
@@ -47,7 +50,7 @@
     }
 
     .accordionItem .accordionCollapsed {
-        margin-bottom: -70%;
+        margin-bottom: -155%;
         overflow: hidden;
     }
 }

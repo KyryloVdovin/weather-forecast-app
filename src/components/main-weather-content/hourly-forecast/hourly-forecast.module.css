@@ -1,0 +1,50 @@
+.hourlyForecastContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.titles {
+    max-width: 80px;
+    margin-top: 55px;
+    font-size: 14px;
+    text-align: right;
+    color: #8e8e8e;
+}
+
+.titles p {
+    margin-bottom: 10px;
+}
+
+.hourlyForecast {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    font-size: 14px;
+    margin-left: 20px;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media screen and (max-width: 440px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}

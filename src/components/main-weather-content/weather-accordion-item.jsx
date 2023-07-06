@@ -2,6 +2,7 @@ import { useState } from "react";
 import s from './weather-accordion-item.module.css';
 import WeatherAccordionHeader from './elements/weather-accordion-header';
 import DailyForecast from './elements/daily-forecast';
+import HourlyForecastContainer from './hourly-forecast/hourly-forecast-container';
 import { weatherCodeSelector, getDay, getDayNumber, getWeatherIcon } from './weather-code-selector';
 import precipitation from '../../images/icons/precipitation.png';
 import rain from '../../images/icons/rain.png';
@@ -10,7 +11,7 @@ import snow from '../../images/icons/snow.png';
 
 const WeatherAccordionItem = (props) => {
     const { time, weatherCode, temperatureMax, temperatureMin, precipitationSum, rainSum,
-        snowfallSum, windspeedMax, windDirection, dailyUnits } = props;
+        snowfallSum, windspeedMax, windDirection, dailyUnits, index } = props;
     const [isActive, setIsActive] = useState(false);
 
     let weatherCodeDesc = weatherCodeSelector(weatherCode);
@@ -19,8 +20,8 @@ const WeatherAccordionItem = (props) => {
     let weatherImage = getWeatherIcon(weatherCode);
 
     return (
-        <div className={s.accordionItem} onClick={() => setIsActive(!isActive)}>
-            <div className={s.accordionHeader} >
+        <div className={s.accordionItem} >
+            <div className={s.accordionHeader} onClick={() => setIsActive(!isActive)}>
                 <WeatherAccordionHeader day={day} dayNumber={dayNumber} weatherImage={weatherImage} weatherCodeDesc={weatherCodeDesc}
                     temperatureMax={Math.round(temperatureMax)} temperatureMin={Math.round(temperatureMin)} />
                 {/* <div>{isActive ? '-' : '+'}</div> */}
@@ -32,20 +33,8 @@ const WeatherAccordionItem = (props) => {
                     <DailyForecast title="Wind" icon={wind} values={windDirection} value={windspeedMax} units={dailyUnits.windspeed_10m_max} />
                     <DailyForecast title="Snow" icon={snow} value={snowfallSum} units={dailyUnits.snowfall_sum} />
                 </div>
-                {/* <div className={s.hourlyForecast}>
-
-                </div> */}
+                <HourlyForecastContainer index={index}/>
             </div>
-        </div>
-    )
-}
-
-const HourlyForecastItem = (props) => {
-    return (
-        <div>
-            <span>13:00</span>
-            <img />
-
         </div>
     )
 }

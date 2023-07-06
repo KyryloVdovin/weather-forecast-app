@@ -52,9 +52,9 @@ const MainContent = (props) => {
         }
 
         time.map((i, index) => onGeneratedRow(i, index));
-        forecasItems = weatherItem.map(item => {
+        forecasItems = weatherItem.map((item, index) => {
             return <WeatherAccordionItem key={item.id} time={item.time} weatherCode={item.weatherCode}
-                temperatureMax={item.temperatureMax} temperatureMin={item.temperatureMin}
+                temperatureMax={item.temperatureMax} temperatureMin={item.temperatureMin} index={index}
                 precipitationSum={item.precipitationSum} rainSum={item.rainSum} snowfallSum={item.snowfallSum}
                 windspeedMax={item.windspeedMax} windDirection={item.windDirection} dailyUnits={item.dailyUnits} />;
         });
@@ -65,13 +65,16 @@ const MainContent = (props) => {
             <div className="detail-info-container">
                 <CurrentLocationWeather currerntCountry={props.currerntCountry} currentCity={props.currentCity}
                     sunriseTime={sunriseTime} sunsetTime={sunsetTime} currentWeekDay={currentWeekDay}
-                    currentDayNumber={currentDayNumber} currentMonth={currentMonth}/>
+                    currentDayNumber={currentDayNumber} currentMonth={currentMonth} />
                 <CurrentTemperature weatherIcon={weatherIcon} temperature={props.currentTemperature} weatherDesc={weatherDesc} />
                 <CurrentWeatherMoreInfo currentWeatherTime={props.currentWeatherTime} hourly={props.hourly}
                     hourlyUnits={props.hourlyUnits} />
             </div>
-            <div className="accordion-items-container">
-                {forecasItems}
+            <div className='accordion-items'>
+                <p className='accordion-container-title'>Daily forecast</p>
+                <div className="accordion-items-container">
+                    {forecasItems}
+                </div>
             </div>
         </div>
     )
