@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/weather-forecast-app/static/css/main.c669770b.css",
-    "main.js": "/weather-forecast-app/static/js/main.220661aa.js",
+    "main.css": "/weather-forecast-app/static/css/main.ff0dcd5c.css",
+    "main.js": "/weather-forecast-app/static/js/main.e65fe479.js",
     "static/js/787.1ddf84a3.chunk.js": "/weather-forecast-app/static/js/787.1ddf84a3.chunk.js",
     "static/media/99d.svg": "/weather-forecast-app/static/media/99d.daaaf24b2b4e4de7aad2c711783f310f.svg",
     "static/media/86d.svg": "/weather-forecast-app/static/media/86d.0ecd281ebb1ed2c5d6d004dcf4d2ef06.svg",
@@ -35,12 +35,12 @@
     "static/media/0d.svg": "/weather-forecast-app/static/media/0d.8b9ced5b0ffeb3cc34cb2eef3fd0d135.svg",
     "index.html": "/weather-forecast-app/index.html",
     "static/media/0n.svg": "/weather-forecast-app/static/media/0n.27dffd10616394bc523ddead5ceaf33c.svg",
-    "main.c669770b.css.map": "/weather-forecast-app/static/css/main.c669770b.css.map",
-    "main.220661aa.js.map": "/weather-forecast-app/static/js/main.220661aa.js.map",
+    "main.ff0dcd5c.css.map": "/weather-forecast-app/static/css/main.ff0dcd5c.css.map",
+    "main.e65fe479.js.map": "/weather-forecast-app/static/js/main.e65fe479.js.map",
     "787.1ddf84a3.chunk.js.map": "/weather-forecast-app/static/js/787.1ddf84a3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c669770b.css",
-    "static/js/main.220661aa.js"
+    "static/css/main.ff0dcd5c.css",
+    "static/js/main.e65fe479.js"
   ]
 }
