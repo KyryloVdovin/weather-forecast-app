@@ -29,7 +29,7 @@ const HourlyForecast = (props) => {
     const hourlyForecastItems = items.map(item => {
         return <HourlyForecastItem key={item.id} {...item} />
     });
-
+    console.log(items);
     return (
         <div className={s.hourlyForecastContainer}>
             <div className={s.titles}>

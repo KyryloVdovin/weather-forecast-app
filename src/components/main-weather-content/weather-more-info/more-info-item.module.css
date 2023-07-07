@@ -2,7 +2,7 @@
     background-color: white;
     padding: 20px;
     border-radius: 30px;
-    min-width: 180px;
+    min-width: 120px;
 }
 
 .itemHeader {
@@ -52,3 +52,31 @@
     font-size: 10px;
     margin-bottom: 5px;
 }
+
+@media screen and (max-width: 440px) {
+    .moreInfoItem {
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .itemHeader img {
+        width: 20px;
+        height: 20px;
+    }
+    .itemHeader p {
+        line-height: 20px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+/* @media screen and (max-width: 340px) {
+    .itemHeader img {
+        width: 18px;
+        height: 18px;
+    }
+    .itemHeader p {
+        line-height: 18px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+} */

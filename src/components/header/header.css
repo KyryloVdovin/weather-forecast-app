@@ -37,7 +37,15 @@
     fill: #8e8e8e;
 }
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1024px) {
+    .input-container input {
+        width: 370px;
+    }
+
+    .found-locations {
+        width: 370px;
+    }
+}
 
 @media screen and (max-width: 830px) {
     .header-container {

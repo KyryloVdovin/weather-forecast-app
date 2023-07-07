@@ -70,10 +70,12 @@ const MainContent = (props) => {
                 <CurrentWeatherMoreInfo currentWeatherTime={props.currentWeatherTime} hourly={props.hourly}
                     hourlyUnits={props.hourlyUnits} />
             </div>
-            <div className='accordion-items'>
+            <div>
                 <p className='accordion-container-title'>Daily forecast</p>
-                <div className="accordion-items-container">
-                    {forecasItems}
+                <div className='accordion-items'>
+                    <div className="accordion-items-container">
+                        {forecasItems}
+                    </div>
                 </div>
             </div>
         </div>

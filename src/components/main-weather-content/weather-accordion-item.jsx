@@ -24,7 +24,6 @@ const WeatherAccordionItem = (props) => {
             <div className={s.accordionHeader} onClick={() => setIsActive(!isActive)}>
                 <WeatherAccordionHeader day={day} dayNumber={dayNumber} weatherImage={weatherImage} weatherCodeDesc={weatherCodeDesc}
                     temperatureMax={Math.round(temperatureMax)} temperatureMin={Math.round(temperatureMin)} />
-                {/* <div>{isActive ? '-' : '+'}</div> */}
             </div>
             <div className={`${s.accordionContent} ${isActive ? s.accordionExpanded : s.accordionCollapsed}`}>
                 <div className={s.dailyForecastItems}>
@@ -33,7 +32,7 @@ const WeatherAccordionItem = (props) => {
                     <DailyForecast title="Wind" icon={wind} values={windDirection} value={windspeedMax} units={dailyUnits.windspeed_10m_max} />
                     <DailyForecast title="Snow" icon={snow} value={snowfallSum} units={dailyUnits.snowfall_sum} />
                 </div>
-                <HourlyForecastContainer index={index}/>
+                <HourlyForecastContainer index={index} />
             </div>
         </div>
     )

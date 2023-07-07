@@ -8,7 +8,7 @@ const HourlyForecastItem = (props) => {
     const weatherIon = getWeatherIcon(weathercode);
     const hours = getTime(time);
     const wind = windspeed_10m.toFixed(1);
-    
+
     return (
         <div className={s.item}>
             <p>{hours}</p>

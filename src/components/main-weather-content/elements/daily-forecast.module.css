@@ -24,3 +24,18 @@
     max-width: 45px;
     margin: 0 auto;
 }
+
+@media screen and (max-width: 440px) {
+    .dailyForecast {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .dailyForecast img {
+        width: 20px;
+    }
+
+    .dailyForecast div:last-child {
+        font-size: 16px;
+    }
+}

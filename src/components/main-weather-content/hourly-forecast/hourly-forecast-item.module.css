@@ -13,6 +13,7 @@
 .item p:nth-child(odd) {
     color: #8e8e8e;
 }
+
 .item p:nth-child(-n+4) {
     font-weight: 500;
 }

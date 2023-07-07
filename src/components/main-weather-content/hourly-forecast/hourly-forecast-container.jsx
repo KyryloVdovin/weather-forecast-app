@@ -9,6 +9,6 @@ const mapDispatchToProps = (state) => {
     }
 }
 
-const HourlyForecastContainer = connect(mapDispatchToProps, { })(HourlyForecast);
+const HourlyForecastContainer = connect(mapDispatchToProps, {})(HourlyForecast);
 
 export default HourlyForecastContainer;

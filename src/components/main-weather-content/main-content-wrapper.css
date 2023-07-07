@@ -19,6 +19,14 @@
 
 @media screen and (max-width: 1024px) {
     .weather-content {
-        padding: 20px;
+        padding: 40px;
+    }
+
+    .weather-wrapper {
+        padding: 0;
+    }
+
+    .weather-body {
+        border-radius: 0;
     }
 }
